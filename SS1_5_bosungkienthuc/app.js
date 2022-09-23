@@ -188,6 +188,48 @@ for(let i = 2000;i<2023;i++){
 }
 */
 
+/*
+Mảng trong lập trình: Danh sách
+Cú pháp khai báo
+let arr = [];
 
 
+*/
+
+let arr = []; // Khai báo mảng rỗng
+
+/// Thêm 1 giá trị vào mảng: push(...)
+arr.push(123);
+arr.push(456);
+arr.push(`Hello`, "Hi");
+
+//// Gọi danh sach:  console.log();
+
+//// Update giá trị cũ => giá trị mới (Đổi Hi -> How are you)
+arr[3] = 'How are you'
+
+
+///// Delete giá trị trong mảng: arr.splice(vị trí phần tử mảng, xóa mấy phần từ, thêm phần tử mảng)
+arr.splice(1, 1);
+
+
+
+//// Tìm vị trí phần tử trong mảng: indexOf
+console.log(
+  arr.indexOf("How are you")
+);
+
+
+//// Hàm find
+console.log(
+  arr.find(x => x > 1)
+);
+
+
+let arr1 = [1, 2, 4, 5, 6, 8, 9, 10];
+/// Hàm filter
+console.log(
+  arr1.filter(x => x % 2 == 0)
+  // Kết quả trả về là 1 mảng khác
+);
 
