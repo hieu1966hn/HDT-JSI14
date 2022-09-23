@@ -92,16 +92,39 @@ else{
 //   console.log("In ra else");
 // }
 
-let num = 7;
-if (num < 7) {
-  console.log("Số này nhỏ hơn 7");
-}
-else if (num === 7) {
-  console.log("Số này bằng 7");
-}
+// let num = 7;
+// if (num < 7) {
+//   console.log("Số này nhỏ hơn 7");
+// }
+// else if (num === 7) {
+//   console.log("Số này bằng 7");
+// }
 
-else {
-  console.log("Số này lớn hơn 7");
-}
+// else {
+//   console.log("Số này lớn hơn 7");
+// }
 
+
+/*
+Có mấy vòng lặp cơ bản: 3
+1. while
+2. do while
+3. For
+
+*/
+
+// Đề bài: In ra số từ 1 -> 10
+let i = 1;
+while (i <= 10) {
+  console.log(i);// 1,2,3,4, ...9,10
+  i = i + 1;//2, 3,4,....10,11
+}
+console.log(i, "giá trị của i sau vòng lặp while là");// 11
+
+/*
+while(điều kiện){
+  ....
+  *lưu ý: sau mỗi lần lặp => nên có ít nhất 1 giá trị nào đó thay đổi
+}
+*/
 
