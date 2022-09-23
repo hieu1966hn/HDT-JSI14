@@ -32,6 +32,16 @@ VD:
 console.log(
   (1 > 2) ? "Đúng" : "Sai"
 ); // => Sai
+
+5. Toán tử logic: &&, ||
+&&: Công dụng dùng để kiểm tra kết quả trả về tất cả đều phải đúng => Sử dụng để kiểm tra các điều kiện đúng
+VD: (1<2 &&  2<3) => true
+    true     true
+VD: (1<2 && 10<11 && 2>3) => false
+    true     true    false
+
+||: Dùng để chọn ra 1 trường hợp đúng trong số các trường hợp sai
+VD: (2<1 || 3<2 || 1<2) => đúng
 */
 
 
@@ -151,7 +161,33 @@ box2: Điều kiện lặp
 box3: thực hiện câu lệnh cuối cùng khi kết thúc mỗi lần lặp
 */
 
-for (let i = 1; i <= 10; i = i + 1) {
-  console.log(i);// 1,2,3,.... 10
+// for (let i = 1; i <= 10; i = i + 1) {
+//   console.log(i);// 1,2,3,.... 10
+// }
+
+
+
+/*
+Đề bài: Xây dựng chương trình kiểm tra và in ra những năm nhuận từ năm 2000 -> 2022
+Biết rằng
+- Năm nhuận là năm: Năm chia hết cho 4 nhưng không chia hết cho 100. (nam%4==0 && nam%100 != 0)
+- Hoặc năm chia hết cho 400.
+
+
+for(let i = 2000;i<2023;i++){
+    if(i%4 == 0 && i%100 !== 0){
+        console.log("nam"+(i)+" la nam nhuan")
+        
+    }
+    else if(i%400 == 0){
+        console.log("nam" +(i)+"nay la nam nhuan")
+    }   
+    else{
+
+    }
 }
+*/
+
+
+
 
