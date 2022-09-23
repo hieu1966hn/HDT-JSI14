@@ -131,11 +131,27 @@ while(điều kiện){
 
 */
 ////// do while:
-let i = 1
-do {
-  console.log(i);// 1,2
-  i = i + 1;//2,3
-}
-while (i <= 10);
+// let i = 1
+// do {
+//   console.log(i);// 1,2
+//   i = i + 1;//2,3
+// }
+// while (i <= 10);
 
 ////=> While: KTĐK => Lặp, do_while: Lặp => KTĐK
+
+//// Vòng lặp for
+/*
+for(box1 ;box2 ; box3){
+lệnh lặp
+}
+
+box1: Giá trị đầu vào (chỉ thực hiện duy nhất lần lặp đầu tiên)
+box2: Điều kiện lặp
+box3: thực hiện câu lệnh cuối cùng khi kết thúc mỗi lần lặp
+*/
+
+for (let i = 1; i <= 10; i = i + 1) {
+  console.log(i);// 1,2,3,.... 10
+}
+
