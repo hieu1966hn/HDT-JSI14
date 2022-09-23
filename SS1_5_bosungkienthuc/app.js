@@ -60,3 +60,48 @@ Mô tả về phép toán: /, %
 ===: So sánh tuyệt đối - hiểu là so sánh cả về Giá trị & Kiểu dữ liệu
 */
 
+
+/*
+if(điều kiện){
+  Câu lệnh 1
+}
+else{
+  Câu lệnh 2
+}
+
+
+if(điều kiện){
+  Câu lệnh 1
+}
+else if(điều kiện 2){
+....
+}
+else if(điều kiện 3){
+
+}
+else{
+  Câu lệnh 2
+}
+
+
+*/
+// if (1 > 2) {
+//   console.log("In ra if");
+// }
+// else {
+//   console.log("In ra else");
+// }
+
+let num = 7;
+if (num < 7) {
+  console.log("Số này nhỏ hơn 7");
+}
+else if (num === 7) {
+  console.log("Số này bằng 7");
+}
+
+else {
+  console.log("Số này lớn hơn 7");
+}
+
+
