@@ -113,18 +113,29 @@ Có mấy vòng lặp cơ bản: 3
 
 */
 
-// Đề bài: In ra số từ 1 -> 10
-let i = 1;
-while (i <= 10) {
-  console.log(i);// 1,2,3,4, ...9,10
-  i = i + 1;//2, 3,4,....10,11
-}
-console.log(i, "giá trị của i sau vòng lặp while là");// 11
+/////// Đề bài: In ra số từ 1 -> 10
+// let i = 1;
+// while (i <= 10) {
+//   console.log(i);// 1,2,3,4, ...9,10
+//   i = i + 1;//2, 3,4,....10,11
+// }
+// console.log(i, "giá trị của i sau vòng lặp while là");// 11
 
 /*
 while(điều kiện){
   ....
   *lưu ý: sau mỗi lần lặp => nên có ít nhất 1 giá trị nào đó thay đổi
 }
-*/
+*
 
+
+*/
+////// do while:
+let i = 1
+do {
+  console.log(i);// 1,2
+  i = i + 1;//2,3
+}
+while (i <= 10);
+
+////=> While: KTĐK => Lặp, do_while: Lặp => KTĐK
