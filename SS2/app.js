@@ -13,26 +13,26 @@ Buổi trước: Ôn tập về Javascript
 
 
 //// Object: 
-let VietDuc = {
-  name: "Việt Đức",
-  age: 17,
-  address: "RC"
-}
+// let VietDuc = {
+//   name: "Việt Đức",
+//   age: 17,
+//   address: "RC"
+// }
 
-console.log(VietDuc);
+// console.log(VietDuc);
 
 /// Khai báo 1 đối tượng máy tính
-let Laptop = {
-  cpu: "m1",
-  ram: "16gb",
-  monitor: "13inch",
-  price: "30tr",
-}
+// let Laptop = {
+//   cpu: "m1",
+//   ram: "16gb",
+//   monitor: "13inch",
+//   price: "30tr",
+// }
 
 
 /////// Thay đổi giá trị trong Object
-Laptop.cpu = "i9 9750h"
-Laptop.card = "RTX 3080ti"
+// Laptop.cpu = "i9 9750h"
+// Laptop.card = "RTX 3080ti"
 
 
 /// C,R,U,D: 
@@ -42,13 +42,36 @@ Laptop.card = "RTX 3080ti"
 
 /// Delete: Xóa khóa monitor trong đối tượng
 
-delete Laptop.monitor
+// delete Laptop.monitor
 
-let BaoLam = {
-  name: "Bảo Lâm",
-  address: ['Hà Nội', "HCM", "Đà Nẵng"],
-  dog: {
-    name: "bon",
-    age: 1
-  }
+// let BaoLam = {
+//   name: "Bảo Lâm",
+//   address: ['Hà Nội', "HCM", "Đà Nẵng"],
+//   dog: {
+//     name: "bon",
+//     age: 1
+//   }
+// }
+
+
+
+
+
+/////// Spread Syntax
+
+let obj = {
+  name: "john",
+  age: 24,
+  address: "22 jump Street"
 }
+
+let obj2 = {
+  name: "Hiếu",
+  age: 24,
+  address: "Hà Nội"
+}
+
+///// Gộp Đối tượng 1 và đối tượng 2 => obj3
+let obj3 = Object.assign(obj, obj2);
+
+console.log("obj3: ", obj3);
