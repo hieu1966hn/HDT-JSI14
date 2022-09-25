@@ -59,19 +59,50 @@ Buổi trước: Ôn tập về Javascript
 
 /////// Spread Syntax
 
-let obj = {
-  name: "john",
-  age: 24,
-  address: "22 jump Street"
-}
+// let obj = {
+//   name: "john",
+//   age: 24,
+//   address: "22 jump Street",
+//   job: "Dev"
+// }
 
-let obj2 = {
-  name: "Hiếu",
-  age: 24,
-  address: "Hà Nội"
-}
+// let obj2 = {
+//   name: "Hiếu",
+//   age: 24,
+//   address: "Hà Nội"
+// }
 
-///// Gộp Đối tượng 1 và đối tượng 2 => obj3
-let obj3 = Object.assign(obj, obj2);
+// ///// Gộp Đối tượng 1 và đối tượng 2 => obj3
+// let obj3 = Object.assign(obj, obj2);
 
-console.log("obj3: ", obj3);
+// console.log("obj3: ", obj3);
+// ====> Object mới sinh ra sẽ có tất cả các thuộc tính từ đối tượng khác
+
+
+
+
+///// Spread Syntax sử dụng với hàm
+// function sum(){
+
+// }
+
+// let sum = (x, y, z) => {
+//   return x + y + z;
+// }
+
+// // console.log(
+// //   sum(1, 2, 3, 4)
+// // ); // => NHẬN 3 BIẾN tổng bằng: 6
+
+// let number = [1, 2, 3, 4]
+// console.log(
+//   sum(...number)
+// );// Lấy toàn bộ từng phần tử của mảng và gán vào tham số trong hàm
+
+
+
+//////// Copy mảng
+let arr1 = [1, 2, 3, 4];
+///// Copy mảng 1 vào biến arr2
+let arr2 = [...arr1];
+console.log("arr2: ", arr2);
