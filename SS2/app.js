@@ -136,7 +136,7 @@ Buổi trước: Ôn tập về Javascript
 
 ////// Giới thiệu về map
 
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // //// Tăng từng phần tử của mảng lên gấp 2 lần và in ra nó
 // //// C1: Dùng vòng lặp thông thường
 // for (let i = 0; i < arr.length; i++) {
@@ -145,16 +145,25 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // console.log("mảng arr sau khi X2 phần tử là: ", arr);
 
 //// Cách 2: dùng map
-let arrMap = arr.map(
-  (item) => {
-    return item = item * 2;
-  }
-)
+// let arrMap = arr.map((item) => {
+//   return item = item * 2;
+// })
 
-console.log(arrMap);
+// console.log(arrMap);
 
 
 /*
 - Map là 1 hàm dùng để thực hiện 1 hành động với từng phần tử  của mảng
 và kết quả trả về là 1 mảng mới hành động hàm đó
 */
+
+
+////// Ví dụ về filter: 
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+/// Lọc và in ra những số chẵn trong mảng
+// let arrFilter = arr.filter(item => item % 2 == 0)
+let arrFilter = arr.filter((item) => {
+  return item % 2 == 0 // lọc số chẵn
+})
+
+console.log("arrFilter: ", arrFilter);
