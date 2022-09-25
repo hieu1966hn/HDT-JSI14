@@ -102,7 +102,20 @@ Buổi trước: Ôn tập về Javascript
 
 
 //////// Copy mảng
-let arr1 = [1, 2, 3, 4];
-///// Copy mảng 1 vào biến arr2
-let arr2 = [...arr1];
-console.log("arr2: ", arr2);
+// let arr1 = [1, 2, 3, 4];
+// ///// Copy mảng 1 vào biến arr2
+// let arr2 = [...arr1];
+// console.log("arr2: ", arr2);
+
+
+
+/////// copy Đối tượng
+let Nguoi = {
+  name: "John",
+  age: 25
+}
+
+let copy_Nguoi = { ...Nguoi }
+console.log("copy_Nguoi: ", copy_Nguoi);
+
+
