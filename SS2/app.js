@@ -110,12 +110,27 @@ Buổi trước: Ôn tập về Javascript
 
 
 /////// copy Đối tượng
-let Nguoi = {
-  name: "John",
-  age: 25
-}
+// let Nguoi = {
+//   name: "John",
+//   age: 25
+// }
 
-let copy_Nguoi = { ...Nguoi }
-console.log("copy_Nguoi: ", copy_Nguoi);
+// let copy_Nguoi = { ...Nguoi }
+// console.log("copy_Nguoi: ", copy_Nguoi);
+
+
+
+
+////// Nối Array
+let arr1 = ["abc", "Gaming", "123"];
+let arr2 = ["snake", "cat", 'dog'];
+
+//// => Nối 2 mảng này với nhau
+// let arr1_2 = arr1.concat(arr2)
+// console.log("arr1_2: ", arr1_2);
+
+let arr1_2 = [...arr1, ...arr2];
+console.log("arr1_2: ", arr1_2);
+
 
 
