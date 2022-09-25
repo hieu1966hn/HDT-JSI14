@@ -121,16 +121,27 @@ Buổi trước: Ôn tập về Javascript
 
 
 
-////// Nối Array
-let arr1 = ["abc", "Gaming", "123"];
-let arr2 = ["snake", "cat", 'dog'];
+// ////// Nối Array
+// let arr1 = ["abc", "Gaming", "123"];
+// let arr2 = ["snake", "cat", 'dog'];
 
-//// => Nối 2 mảng này với nhau
-// let arr1_2 = arr1.concat(arr2)
+// //// => Nối 2 mảng này với nhau
+// // let arr1_2 = arr1.concat(arr2)
+// // console.log("arr1_2: ", arr1_2);
+
+// let arr1_2 = [...arr1, ...arr2];
 // console.log("arr1_2: ", arr1_2);
 
-let arr1_2 = [...arr1, ...arr2];
-console.log("arr1_2: ", arr1_2);
 
 
+////// Giới thiệu về map
 
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//// Tăng từng phần tử của mảng lên gấp 2 lần và in ra nó
+//// C1: Dùng vòng lặp thông thường
+for (let i = 0; i < arr.length; i++) {
+  arr[i] = arr[i] * 2;
+}
+console.log("mảng arr sau khi X2 phần tử là: ", arr);
+
+//// Cách 2
