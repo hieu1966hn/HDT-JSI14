@@ -34,7 +34,23 @@ Vai trò?
 //     return []
 //   }
 
-  
+
 // }
 
 /////////// Thuộc tính của Class
+class Person {
+  /// Khai báo thuộc tính 
+  constructor(name, age, address, id) {
+    // Gán giá trị  với class
+    this._name = name;
+    this._age = age;
+    this._address = address;
+    this._id = id;
+  }
+}
+
+
+let Hieu = new Person('Hiếu', 25, "Hà Nội", "0123456789");
+// console.log("Hieu: ", Hieu);
+console.log(Hieu._address);
+
