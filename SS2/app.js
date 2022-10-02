@@ -159,11 +159,37 @@ và kết quả trả về là 1 mảng mới hành động hàm đó
 
 
 ////// Ví dụ về filter: 
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-/// Lọc và in ra những số chẵn trong mảng
-// let arrFilter = arr.filter(item => item % 2 == 0)
-let arrFilter = arr.filter((item) => {
-  return item % 2 == 0 // lọc số chẵn
-})
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// /// Lọc và in ra những số chẵn trong mảng
+// // let arrFilter = arr.filter(item => item % 2 == 0)
+// let arrFilter = arr.filter((item) => {
+//   return item % 2 == 0 // lọc số chẵn
+// })
 
-console.log("arrFilter: ", arrFilter);
+// console.log("arrFilter: ", arrFilter);
+
+
+let animals = [
+  {
+    name: "cat",
+    size: "small",
+    weight: 5
+  },
+  {
+    name: "dog",
+    size: "small",
+    weight: 7
+  },
+  {
+    name: "elphant",
+    size: "big",
+    weight: 5000
+  },
+]
+/*
+Yêu cầu đề bài: 
+1. In ra tên từng con vật trong mảng
+2. Lấy ra tên những con vật nào cân nặng weight < 1000
+3. Lọc ra những con vật nào có size "small"
+3. Lọc ra những con vật nào có size "big"
+*/
