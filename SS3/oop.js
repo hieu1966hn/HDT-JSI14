@@ -87,3 +87,26 @@ class Person {
     return `I'am Person and my name is ${this.name}`
   }
 }
+
+/////Khai báo class Student kế thừa từ class Person
+class Student extends Person {
+  constructor(_name, _age, _address, _class, _idStudent) {
+    // Sử dụng cú pháp super() để kế thừa các thuộc tính cha đã có
+    super(_name, _age, _address);
+    this.class = _class;
+    this.idStudent = _idStudent;
+  }
+
+  /// Có sẵn Phương thức say()
+  say() {
+    /// Kế thừa và ghi đè phương thức say()
+    super.say(); // Kế thừa phương thức
+    return super.say() + ` and I am learning code from MindX School`
+  }
+}
+
+
+let TuanAnh = new Student("Tuấn Anh", 14, "Liễu Giai", "HDT-JSI14", 123);
+console.log(
+  TuanAnh.say()
+);
