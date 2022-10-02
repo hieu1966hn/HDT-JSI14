@@ -65,6 +65,13 @@ const ex4 = (whichSolution = 1) => {
 };
 
 
+//// VD chạy hàm bài 1:
+console.log(
+  ex1()
+);
+
+
+
 
 /////// Giải thích về hàm includes
 const array1 = [1, 2, 3];
