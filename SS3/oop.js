@@ -39,7 +39,7 @@ Vai trò?
 
 /////////// Thuộc tính của Class
 class Person {
-  /// Khai báo thuộc tính 
+  /// Hàm khởi tạo: Khai báo thuộc tính 
   constructor(name, age, address, id) {
     // Gán giá trị  với class
     this._name = name;
@@ -47,10 +47,19 @@ class Person {
     this._address = address;
     this._id = id;
   }
+
+  say() {
+    alert("Tôi đang nói đấy")
+  }
+
+  coding() {
+    alert("Đang code đấy đừng động vào")
+  }
 }
 
 
 let Hieu = new Person('Hiếu', 25, "Hà Nội", "0123456789");
 // console.log("Hieu: ", Hieu);
 console.log(Hieu._address);
+Hieu.coding()
 
