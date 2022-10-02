@@ -110,3 +110,39 @@ let TuanAnh = new Student("Tuấn Anh", 14, "Liễu Giai", "HDT-JSI14", 123);
 console.log(
   TuanAnh.say()
 );
+
+
+/*
+Bài 1: Khởi tạo kiểu dữ liệu hình tròn.
+Biết rằng hình tròn có thuộc tính: bán kính hình tròn
+Xây dựng phương thức trong kDL hình tròn như sau:
+1. Diện tích hình tròn
+2. Chu vi đường tròn
+
+Bài 2: Khởi tạo KDL hình chữ nhật
+Biết rằng hình cn có thuộc tính truyền vào là: chiều dài, chiều rộng
+Xây dựng phương thức trong kDL hình CN như sau:
+1. Chu vi hình chữ nhật
+2. Diện tích hình chữ nhật
+
+
+*/
+const PI = 3.14;
+// Chữa bài 1: 
+class HinhTron {
+  constructor(bkht) {
+    this.bkht = bkht
+  }
+
+  dtht() {
+    return PI * this.bkht * this.bkht
+  }
+
+  cvht() {
+    return PI * this.bkht * 2
+  }
+}
+
+let hinhtron1 = new HinhTron(4);
+console.log("diện tích hình tròn là: ", hinhtron1.dtht());
+console.log("chu vi hình tròn là: ", hinhtron1.cvht());
