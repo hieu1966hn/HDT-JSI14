@@ -45,6 +45,53 @@ map: Thực hiện hành động với từng phần tử của mảng => 1 mả
 - map chỉ dành cho KDL mảng.
 */
 //// Bài toán *2 toàn bộ phần tử mảng arr và in ra kết quả 
-let arr1 = arr.map(item => item * 2) // [2,4,...20]
+// let arr1 = arr.map(item => item * 2) // [2,4,...20]
+// console.log(arr1);
+
+// /// In ra mảng kết quả là số dư của từng phần tử mảng arr khi  chia với 5.
+
+
+/*
+Filter: Sử dụng để lọc các phần tử sao cho thỏa mãn điều kiện => 1 mảng mới thỏa mãn điều kiện đã lọc
+
+*/
+
+//// Bài toán: Lọc ra các phần tử là số lẻ trong mảng arr và in ra trên màn hình console
+
+let danhsach = [
+  {
+    name: "nho",
+    value: 100
+  },
+  {
+    name: "dưa hấu",
+    value: 5
+  },
+  {
+    name: "xoài",
+    value: 20
+  },
+]
+
+/*
+1. in ra tên của từng quả
+2. In ra tên quả nào có số lượng quả > 5
+3. In ra tên quả nào có tên nhiều hơn 1 ký tự 
+*/
+
+
+/// Câu 1:
 console.log(
+  danhsach.map(item => item.name)
+);
+
+// Câu 2: 
+console.log(
+  (danhsach.filter(item => item.value > 5)).map(item => item.name)
+);
+
+// Câu 3: 
+console.log(
+  danhsach.filter(item => item.name.indexOf(" ") > 0).map(item => item.name)
+  /////                  kq trả về là vị trí phần tử đầu tiên tìm thấy
 );
