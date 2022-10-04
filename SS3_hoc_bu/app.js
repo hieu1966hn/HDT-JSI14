@@ -76,22 +76,85 @@ let danhsach = [
 /*
 1. in ra tên của từng quả
 2. In ra tên quả nào có số lượng quả > 5
-3. In ra tên quả nào có tên nhiều hơn 1 ký tự 
+3. In ra tên quả nào có tên nhiều hơn 1 ký tự
 */
 
 
 /// Câu 1:
+// console.log(
+//   danhsach.map(item => item.name)
+// );
+
+// // Câu 2: 
+// console.log(
+//   (danhsach.filter(item => item.value > 5)).map(item => item.name)
+// );
+
+// // Câu 3: 
+// console.log(
+//   danhsach.filter(item => item.name.indexOf(" ") > 0).map(item => item.name)
+//   /////                  kq trả về là vị trí phần tử đầu tiên tìm thấy
+// );
+
+/*
+- LocalStorage: Nơi lưu trữ dữ liệu cục bộ tại Browser
++ localStorage cho phép lưu trữ tối đa: 5MG
++ Lưu ý: 
+bit, byte, kB, MB, GB, TB, PB, ...
+1 byte = 8 bit
+1 kB = 1024 byte
+1 Mb = 1024 Kb
+tương tự với các đơn vị đằng sau.
+
+- LS chỉ lưu trữ string => Dữ liệu muốn lưu trên LS buộc phải Ép kiểu về KDL String
+- LS tồn tại vĩnh viễn trên trình duyệt trừ khi người dùng clear nó đi
+
+
+*/
+
+// Kiểu dữ liệu đối tượng
+// let obj = {
+//   name: "Hiếu"
+// }
+
+
+////// Cú pháp khai báo khóa và giá trị lưu trữ trên LS
+/*
+C,R,U,D: 
+1. Create
+2. Read
+3. Update
+4. Delete
+*/
+///// VD: Lưu trữ khóa 
+// C1: 
+// localStorage.setItem("name", "Huy Bình");
+
+// // C2: 
+// localStorage.teacher = "Hiếu"
+///// VD: lưu 1 mảng trên LS?
+let mang = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+localStorage.setItem("arr", JSON.stringify(mang));
+//                                        ép kiểu về chuỗi
+
+
+
+
+/// Read: In ra được toàn bộ phần tử đã lưu trên LS
+// console.log(
+//   localStorage.getItem("teacher")
+// );
+
+
+//// Lấy bất cứ kiểu dữ liệu từ khóa trên LS
 console.log(
-  danhsach.map(item => item.name)
+  JSON.parse(localStorage.getItem("arr"))
 );
 
-// Câu 2: 
-console.log(
-  (danhsach.filter(item => item.value > 5)).map(item => item.name)
-);
 
-// Câu 3: 
-console.log(
-  danhsach.filter(item => item.name.indexOf(" ") > 0).map(item => item.name)
-  /////                  kq trả về là vị trí phần tử đầu tiên tìm thấy
-);
+/// Update: 
+// localStorage.teacher = "Thầy Hiếu"
+
+
+// /// Delete khóa
+// localStorage.removeItem("teacher")
