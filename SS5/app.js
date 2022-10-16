@@ -127,46 +127,80 @@ Phương thức: set(), get(), GPA() để tính điểm trung bình 3 môn họ
 
 
 /*
-Bài 12: 
+Bài 12:
 Viết một chương trình định nghĩa một lớp hình có constructor
-đưa ra giá trị của chiều rộng và chiều dài. 
-Sau đó, định nghĩa hai lớp con hình tam giác và hình chữ nhật. 
-Hai lớp con này tính diện tích của hình. 
-Trong lớp chính, định nghĩa hai biến hình tam giác và hình chữ nhật. 
+đưa ra giá trị của chiều rộng và chiều dài.
+Sau đó, định nghĩa hai lớp con hình tam giác và hình chữ nhật.
+Hai lớp con này tính diện tích của hình.
+Trong lớp chính, định nghĩa hai biến hình tam giác và hình chữ nhật.
 Sau đó gọi hàm area() trong hai biến này.
 
 */
 
-class Shape {
-  constructor(width, height) {
-    this.width = width;
-    this.height = height;
-  }
-}
+// class Shape {
+//   constructor(width, height) {
+//     this.width = width;
+//     this.height = height;
+//   }
+// }
 
-class Triangle extends Shape {
-  constructor(width, height) {
-    super(width, height);
-  }
-  area() {
-    // Trả về diện tích tam giác
-    return (this.width * this.height) / 2;
-  }
-}
+// class Triangle extends Shape {
+//   constructor(width, height) {
+//     super(width, height);
+//   }
+//   area() {
+//     // Trả về diện tích tam giác
+//     return (this.width * this.height) / 2;
+//   }
+// }
 
-class Rectangle extends Shape {
-  constructor(width, height) {
-    super(width, height);
-  }
+// class Rectangle extends Shape {
+//   constructor(width, height) {
+//     super(width, height);
+//   }
 
-  area() {
-    // trả về diện tích hình chữ nhật
-    return this.width * this.height;
-  }
-}
+//   area() {
+//     // trả về diện tích hình chữ nhật
+//     return this.width * this.height;
+//   }
+// }
 
 /// THỬ VỚI HÌNH TAM GIÁC
 // let tamgiac = new Triangle(20, 40)
 // console.log("tamgiac: ", tamgiac);
 
 /// TƯƠNG TỰ VỚI HÌNH CHỮ NHẬT
+
+
+///////// Bài 13: 
+
+/*
+Bài 13: 
+Viết một chương trình với lớp mẹ animal.
+Trong chương trình này, định nghĩa các biến tên, tuổi và hàm set_value(). 
+Sau đó tạo hai biến cơ bản Zebra và Dolphin để viết message thông báo tên tuổi và 
+những thông tin khác (như nguồn gốc).
+
+*/
+
+
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  set_value(prop, value) {
+    this[prop] = value;
+    return this[prop];
+  }
+
+  send_message() {
+    return `My name is ${this.name} and I'm ${this.age} year${this.age > 1 ? "s" : ''} old`
+  }
+}
+
+const Zebra = new Animal("Zebra", 1);
+console.log("Zebra: ", Zebra);
+const Dolphin = new Animal("Dolphin", 3);
+console.log("Dolphin: ", Dolphin);
