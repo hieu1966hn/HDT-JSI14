@@ -94,5 +94,33 @@ console.log(
 );
 
 
-///// 
+///// Tạo 1 class Student kế thừa từ class cha
+class Student extends People {
+  constructor(name, age, address, id, math, physical, chemistry) {
+    super(name, age, address); /// Kế thừa từ cha nó 3 thuộc tính
+    this.id = id;
+    this.math = math;
+    this.physical = physical;
+    this.chemistry = chemistry;
+  }
+
+  // Get và set đều đã được kế thừa từ cha
+
+  GPA() {
+    /////// convert từ string => number
+    if (typeof (this.math + this.physical + this.chemistry) !== "number") {
+      return "Score must be number"
+    }
+
+    const arr = [this.math, this.physical, this.chemistry];
+    const total = arr.reduce((a, current) => a + current); // tổng 3 cái
+    const average = total / arr.length;
+    return average;
+  }
+
+}
+
+let student = new Student("John", 24, "Hà Nội", "0123456789", 10, 5, 10);
+console.log(student);
+
 
