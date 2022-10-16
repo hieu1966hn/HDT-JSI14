@@ -40,13 +40,59 @@ và các phần tử có giá trị là chữ hoa chuyển thành chữ thườn
 
 
 /////// Câu 10: chữa
-let str = " High knowledge, high return";
-let strToArray = str.toLowerCase();
-console.log("strToArray: ", strToArray);
-strToArray = strToArray.split(" ");
-console.log("strToArray: ", strToArray);
-strToArray = strToArray.filter(item => item != "")
-console.log("strToArray: ", strToArray);
+// let str = " High knowledge, high return";
+// let strToArray = str.toLowerCase();
+// console.log("strToArray: ", strToArray);
+// strToArray = strToArray.split(" ");
+// console.log("strToArray: ", strToArray);
+// strToArray = strToArray.filter(item => item != "")
+// console.log("strToArray: ", strToArray);
 
 
+
+
+/*
+Bài 11:
+Tạo class People gồm:
+Thuộc tính: name, age,address để lưu lần lượt các giá trị tên, tuổi và địa chỉ.
+Phương thức trong class People gồm: set(), get() là hàm nhập và xuất;
+Tạo class Students kế thừa từ class People.
+Class Students sẽ có thêm:
+Thuộc tính id để lưu mã sinh viên, math lưu điểm môn toán, physical để lưu điểm môn vật lý, chemistry để lưu điểm môn hoá học.
+Phương thức: set(), get(), GPA() để tính điểm trung bình 3 môn học  
+
+
+*/
+
+
+///// Chữa bài 11: 
+
+class People {
+  constructor(name, age, address) {
+    this.name = name;
+    this.age = age;
+    this.address = address
+  }
+
+  set(prop, value) {
+    this[prop] = value
+    return this[prop]
+  }
+
+  get(prop) {
+    return this[prop]
+  }
+
+}
+
+let MinhTien = new People("Minh Tiến", 18, "Hà Nội");
+
+MinhTien.set("name", "Trung Hiếu");
+console.log("MinhTien: ", MinhTien);
+console.log(
+  MinhTien.get("age")
+);
+
+
+///// 
 
