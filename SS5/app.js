@@ -175,32 +175,32 @@ Sau đó gọi hàm area() trong hai biến này.
 ///////// Bài 13: 
 
 /*
-Bài 13: 
+Bài 13:
 Viết một chương trình với lớp mẹ animal.
-Trong chương trình này, định nghĩa các biến tên, tuổi và hàm set_value(). 
-Sau đó tạo hai biến cơ bản Zebra và Dolphin để viết message thông báo tên tuổi và 
+Trong chương trình này, định nghĩa các biến tên, tuổi và hàm set_value().
+Sau đó tạo hai biến cơ bản Zebra và Dolphin để viết message thông báo tên tuổi và
 những thông tin khác (như nguồn gốc).
 
 */
 
 
-class Animal {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+// class Animal {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
 
-  set_value(prop, value) {
-    this[prop] = value;
-    return this[prop];
-  }
+//   set_value(prop, value) {
+//     this[prop] = value;
+//     return this[prop];
+//   }
 
-  send_message() {
-    return `My name is ${this.name} and I'm ${this.age} year${this.age > 1 ? "s" : ''} old`
-  }
-}
+//   send_message() {
+//     return `My name is ${this.name} and I'm ${this.age} year${this.age > 1 ? "s" : ''} old`
+//   }
+// }
 
-const Zebra = new Animal("Zebra", 1);
-console.log("Zebra: ", Zebra);
-const Dolphin = new Animal("Dolphin", 3);
-console.log("Dolphin: ", Dolphin);
+// const Zebra = new Animal("Zebra", 1);
+// console.log("Zebra: ", Zebra);
+// const Dolphin = new Animal("Dolphin", 3);
+// console.log("Dolphin: ", Dolphin);
