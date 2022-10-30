@@ -7,13 +7,18 @@
   padding: 40px 0;
 }
 
-
 .auth-model {
   background: #fff;
   border: 1px solid #d3d3d3;
   width: 95vw;
   max-width: 350px;
   border-radius: 5px;
+}
+
+.auth-header {
+  text-align: center;
+  border-bottom: 1px solid #d3d3d3;
+  padding: 10px 0;
 }
 
 .auth-header p {
