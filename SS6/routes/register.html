@@ -45,6 +45,23 @@
     updateProfile,
     signOut,
     sendEmailVerification,
-  } from ""
+  } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
+  import { auth } from "../firebase.js";
+
+  const form = document.querySelector("form");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    document.querySelector("#btn-container").innerHTML =
+      `
+    <button class="btn btn-primary w-100" type="button" disable>
+      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      <span>Sign Up... </span>
+    </button>
+    `
+
+
+
+  })
 
 </script>
