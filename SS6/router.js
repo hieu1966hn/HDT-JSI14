@@ -1,6 +1,6 @@
-/// import ..
+import { auth, subscriptions } from "./firebase.js";
 
-
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js";
 
 const routes = {
   "/": {
@@ -41,5 +41,66 @@ const isMatchRoute = (route, pathname) => {
   if (isMatching) {
     const routeMatches = route.match(/\/[^\\\/]+/gm) || [];
     const pathnameMatches = pathname.match(/\/[^\\\/]+/gm) || [];
+
+    for (const [index, routeMatch] of routeMatches.entries()) {
+      if (routeMatch.startsWith("/:")) {
+        params[routeMatch.slice(2)] = pathnameMatches[index].slice(1);
+      }
+    }
   }
-}
+
+  return { isMatching, params };
+};
+
+export let params = {};
+
+const renderRoute = () => {
+  let hasMatched = false;
+  for (const route in routes) {
+    const { isMatching, params: loadedParams } = isMatchRoute(
+      route,
+      location.hash ? location.hash.slice(1) : "/"
+    );
+
+    if (isMatching) {
+      hasMatched = true;
+      params = loadedParams;
+      if (
+        routes[route].requireAuth &&
+        (!auth.currentUser || !auth.currentUser.emailVerified)
+      ) {
+        location.hash = "/login";
+        break;
+      }
+      if (
+        routes[route].notRequireAuth &&
+        auth.currentUser &&
+        auth.currentUser.emailVerified
+      ) {
+        location.hash = "/";
+        break;
+      }
+      fetch(routes[route].body)
+        .then((res) => res.text())
+        .then((html) => {
+          document.body.innerHTML = "";
+          document.body.append(
+            document.createRange().createContextualFragment(html)
+          );
+        });
+      break;
+    }
+  }
+  if (!hasMatched) document.body.innerHTML = `404`;
+  subscriptions.forEach(
+    (subscription) => typeof subscription === "function" && subscription()
+  );
+};
+
+onAuthStateChanged(auth, () => {
+  renderRoute();
+});
+
+window.addEventListener("hashchange", () => {
+  renderRoute();
+});
