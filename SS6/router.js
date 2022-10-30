@@ -28,6 +28,18 @@ const routes = {
     requireAuth: true,
     notRequireAuth: false,
   },
+};
 
+const isMatchRoute = (route, pathname) => {
+  const parsed = route.replace(/\/:[^\/]+/gm, "/[^\\/]+");
 
+  const regex = new RegExp(`^${parsed}\\/?$`, "gm");
+  const isMatching = regex.test(pathname);
+
+  let params = {};
+
+  if (isMatching) {
+    const routeMatches = route.match(/\/[^\\\/]+/gm) || [];
+    const pathnameMatches = pathname.match(/\/[^\\\/]+/gm) || [];
+  }
 }
