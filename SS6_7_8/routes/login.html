@@ -50,6 +50,31 @@
       <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
       <span>Sign In ...</span>
       </button>
-    `
-  })
+    `;
+
+
+    const email = form.email.value.trim();
+    const password = form.password.value;
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user);
+        if (!user.emailVerified) {
+          signOut(auth);
+          throw { code: "Email not verified", message: "" };
+        }
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+        alert(errorCode);
+      })
+      .finally(() => {
+        document.querySelector("#btn-container").innerHTML = `
+        <button class="btn btn-primary w-100" type="submit">Sign In</button>
+        `;
+      });
+  });
 </script>
