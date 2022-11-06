@@ -27,14 +27,14 @@
 
 
 
-// const ex10 = () => {
-//   const str = "High knowledge, high return";
-//   let arr = [...str];
-//   arr = arr.filter((v) => v != " ").map((v) => v.toLowerCase());
-//   alert("Hãy mở console để kiểm tra đầu ra");
-//   console.log("arr: ", arr);
-//   return arr;
-// };
+const ex10 = () => {
+  const str = "High knowledge, high return";
+  let arr = [...str];
+  arr = arr.filter((v) => v != " ").map((v) => v.toLowerCase());
+  alert("Hãy mở console để kiểm tra đầu ra");
+  console.log("arr: ", arr);
+  return arr;
+};
 
 
 
