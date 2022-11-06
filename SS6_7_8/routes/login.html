@@ -41,5 +41,15 @@
   } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
   import { auth } from "../firebase.js";
 
+  const form = document.querySelector("form");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();// ngăn trình duyệt tự động reload.
 
+    document.querySelector("#btn-container").innerHTML = `
+    <button class = "btn btn-primary w-100" type="button" disabled>
+      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      <span>Sign In ...</span>
+      </button>
+    `
+  })
 </script>
