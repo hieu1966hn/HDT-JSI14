@@ -30,7 +30,20 @@ function task2() {
     console.log("Task 2");
   }, 2000)
 }
-
 //// Callback 
-task1(task2);
+// task1(task2);
 
+///// Cách 2 Promise => Xử lý bất đồng bộ
+const myPromise = new Promise(function (resolve, reject) {
+  setInterval(() => {
+    resolve("Task 1");
+  }, 3000);
+})
+
+myPromise.then((resolve) => {
+  console.log(resolve);
+  task2();
+})
+  .catch(reject => {
+    console.log(reject);
+  })
